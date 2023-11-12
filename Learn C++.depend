@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1584205420 source:c:\users\ghassen\onedrive\documents\prog. fundamentals\learn c++\main.cpp
+	<iostream>
+
+1695929371 source:c:\users\ghassen\onedrive\documents\prog. fundamentals\learn c++\datatypes&variables.cpp
+	<iostream>
+
+1696670965 source:c:\users\ghassen\onedrive\documents\prog. fundamentals\learn c++\operators.cpp
+	<iostream>
+
+1697138170 source:c:\users\ghassen\onedrive\documents\prog. fundamentals\learn c++\selection.cpp
+	<iostream>
+
+1699382031 source:c:\users\ghassen\onedrive\documents\prog. fundamentals\learn c++\loops.cpp
+	<iostream>
+
+1699554267 source:c:\users\ghassen\onedrive\documents\prog. fundamentals\learn c++\1d-arrays.cpp
+	<iostream>
+

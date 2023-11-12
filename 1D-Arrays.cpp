@@ -11,7 +11,7 @@ int main()
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
-    cout<<endl;
+    cout<<endl; sqdqzd
     int a;
     for(int i=0;i<n/2;i++){
         int last=n-i-1;

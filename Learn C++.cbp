@@ -35,6 +35,8 @@
 		<Unit filename="1D-Arrays.cpp" />
 		<Unit filename="CharArrays.cpp" />
 		<Unit filename="DataTypes&amp;Variables.cpp" />
+		<Unit filename="Function.cpp" />
+		<Unit filename="MultidimensionalArrays.cpp" />
 		<Unit filename="Operators.cpp" />
 		<Unit filename="Selection.cpp" />
 		<Unit filename="loops.cpp" />

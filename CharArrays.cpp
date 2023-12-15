@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int main_charArr()
 {
 //----- Practice ----//
 //-> P1 - Conc Strings

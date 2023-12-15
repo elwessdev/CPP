@@ -4,6 +4,7 @@ using namespace std;
 
 int main_1D()
 {
+<<<<<<< Updated upstream
 //----- Easy to Medium Challenges ----//
 // P1 - Is increasing array ?
 //    int arr[200];
@@ -336,6 +337,65 @@ int main_1D()
 
 
 // P5 - Longest Subarray
+=======
+//----- Practice ----//
+//--> P1 - Reverse in place
+//    int arr[200];
+//    int n; cin>>n;
+//
+//    for(int i=0;i<n;i++){
+//        cin>>arr[i];
+//    }
+//    cout<<endl; sqdqzd
+//    int a;
+//    for(int i=0;i<n/2;i++){
+//        int last=n-i-1;
+//        a=arr[i];
+//        arr[i]=arr[last];
+//        arr[last]=a;
+//    }
+//    for(int i=0;i<n;i++){
+//        cout<<arr[i]<<" ";
+//    }
+
+//--> P2 - Find most frequent number
+//    int num[200];
+//    int n; cin>>n;
+//    for(int i=0;i<n;i++) cin>>num[i];
+//
+//    int max_value=-1,max_repeat=-1;
+//
+//    for(int a=0;a<n;a++){
+//        int repeat=0;
+//        for(int j=0;j<n;j++) repeat+=num[as]==num[j];
+//        if(max_repeat<repeat)
+//            max_repeat=repeat, max_value=num[a];
+//    }
+//    cout<<max_value<<" repeated "<<max_repeat<<" times";
+
+//    int n, nums[200];
+//    int freq[150+1]={0};
+//    cin>>n;
+//    for(int i=0;i<n;i++){
+//        cin>>nums[i];
+//        freq[nums[i]]++;
+//    }
+//    int repeated=-1;
+//    for(int j=0;j<151;j++){
+//        if(freq[repeated]<freq[j]){
+//            repeated=j;
+//        }
+//    }
+//    cout<<repeated<<" repeated "<<freq[repeated]<<" times";
+
+
+
+
+
+
+
+
+>>>>>>> Stashed changes
 
 
 
@@ -346,4 +406,9 @@ int main_1D()
 
 
 
+<<<<<<< Updated upstream
+=======
+    // End
+    return 0;
+>>>>>>> Stashed changes
 }

@@ -49,6 +49,11 @@
 1702628378 source:e:\sbs\prog basics\cpp\multidimensionalarrays.cpp
 	<iostream>
 
-1702629518 source:e:\sbs\prog basics\cpp\function.cpp
+1702977516 source:e:\sbs\prog basics\cpp\function.cpp
 	<iostream>
+	<string>
+
+1702977548 source:e:\sbs\prog basics\cpp\employee_system.cpp
+	<iostream>
+	<string>
 

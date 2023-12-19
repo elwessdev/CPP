@@ -1,97 +1,63 @@
 #include <iostream>
+#include <string>
 using namespace std;
+//-------- Functions --------
+// P1 - Max of 6 numbers
 
-// Employee Program (v2)
-void employee_system{
-    while(true){
-        int choice=-1;
-        cout<<"\nEnter your choice:\n";
-        cout<<"1) Add new employee\n";
-        cout<<"2) Print all employees\n";
-        cout<<"3) Delete by age\n";
-        cout<<"4) Update Salary by name\n";
 
-         cout<<"-> Enter your choice: "; cin>>choice;
-
-        if(!(choice>=1&&choice<=4)){
-            cout<<"\nInvalid choice. Please try again\n";
-            continue;
-        }
-
-        if(choice==1){
-            // Add New Employee
-            cout<<"\nEnter name: "; cin>>names[added];
-            cout<<"Enter age: "; cin>>ages[added];
-            cout<<"Enter salary: "; cin>>salaries[added];
-            cout<<"Enter gender (M/F):"; cin>>genders[added];
-            added++;
-        } else if(choice==2){
-            // Print All Employees
-            cout<<"\n***************\n";
-            for(int i=0;i<added;i++){
-                if(ages[i]!=-1){
-                    cout<<names[i]<<" "<<ages[i]<<" "<<salaries[i]<<" "<<genders[i]<<"\n";
-                }
-            }
-        } else if(choice==3){
-            // Delete by age
-            int start_age,end_age;
-            cout<<"\nEnter start and end age: "; cin>>start_age>>end_age;
-            for(int i=0;i<added;i++){
-                if(ages[i]>=start_age&&ages[i]<=end_age){
-                    ages[i]=-1;
-                }
-            }
-        } else{
-            // Update Salary by name
-            string name;
-            double new_salary;
-            bool is_found=false;
-            cout<<"\nEnter name and new salary: "; cin>>name>>new_salary;
-            for(int i=0;i<added;i++){
-                if(ages[i]!=-1&&names[i]==name){
-                    is_found=true;
-                    salaries[i]=new_salary;
-                    break;
-                }
-            }
-            if(!is_found){
-                cout<<"No employee with this name!\n";
-            }
-        }
+// P2 - Reverse a string
+void reverse_str(string &str){
+    for(int i=0;i<(str.size()/2);i++){
+            char temp=str[i];
+            str[i]=str[str.size()-i];
+            str[str.size()-i]=temp;
+    }
 }
+
+// P3 - Calculator
+int calc_choice(){
+    int choice=-1;
+
+}
+float calc_add(){}
+float calc_substract(){}
+float calc_multiply(){}
+float calc_divide(){}
+void Calculator(){
+    int choice = calc_choice();
+    bool run=true;
+    while(run){
+        if(choice<0||choice>5){
+            cout<<"Error, Pls choose one :) \n";
+            continue;
+        } else if(choice==1){
+            calc_add();
+        } else if(choice==2){
+            calc_substract();
+        } else if(choice==3){
+            calc_multiply();
+        } else if(choice==4){
+            calc_divide();
+        } else {
+            run=false;
+            cout<<"Byeeeeee :)";
+        }
+    }
+
+}
+
 int main(){
-//----- Application - Employee Program ----//
-    int MAX=10000;
+//-------- Homework --------
+// P1 - Max of 6 numbers
 
-    string names[MAX];
-    int ages[MAX];
-    double salaries[MAX];
-    char genders[MAX];
-    int added=0;
+// P2 - Reverse a string
+//    string stra;
+//    cin>>stra;
+//    reverse_str(stra);
+//    cout<<stra<<"\n";
 
-
- }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// P3 - Calculator
+    Calculator();
 
 
     // End

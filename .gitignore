@@ -35,6 +35,7 @@
 *.out
 *.app
 
-./Learn C++.layout
+*.layout
+*.depend
 
 # End of https://www.toptal.com/developers/gitignore/api/c++

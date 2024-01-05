@@ -136,6 +136,10 @@ int main()
     // }
     // cout<<arr_average(arr,len);
 
+    int n;
+    cout<<"Enter n: "; cin>>n;
+    cout<<"=> "<<n;
+
 
     return 0;
 }

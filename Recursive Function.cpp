@@ -40,9 +40,9 @@ int length_3n1(int n){
     if(n==1)
         return le;
     if(n%2==0){
-        length_3n1(n/2);
+        return length_3n1(n/2);
     } else {
-        length_3n1(3*n+1);
+        return length_3n1(3*n+1);
     }
 }
 
@@ -54,7 +54,7 @@ int my_pow(int val, int p){
     else {
         pow_sum*=val;
         p--;
-        my_pow(val,p);
+        return my_pow(val,p);
     }
 }
 
@@ -67,7 +67,7 @@ int arr_max(int arr[],int len){
         return max_num;
     } else {
         len--;
-        arr_max(arr, len);
+        return arr_max(arr, len);
     }
 }
 
@@ -78,17 +78,17 @@ int arr_sum(int arr[],int len){
     if(len==0)
         return sum_ar;
     len--;
-    arr_sum(arr, len);
+    return arr_sum(arr, len);
 }
 
 // P5- Array average
 int sum_average=0;
-int arr_average(int arr[],int len){
+float arr_average(float arr[],int len){
     sum_average+=arr[len];
     if(len==0)
-        return sum_average/;
+        return sum_average;
     len--;
-    arr_sum(arr, len);
+    return arr_average(arr, len);
 }
 
 int main()
@@ -129,30 +129,14 @@ int main()
 //    cout<<arr_sum(arr,len);
 
 // P5- Array average
-    int arr[100];
-    int len; cin>>len;
-    for(int i=0;i<len;i++){
-        cin>>arr[i];
-    }
-    cout<<arr_average(arr,len);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    // float arr[100];
+    // int len; cin>>len;
+    // for(int i=0;i<len;i++){
+    //     cin>>arr[i];
+    // }
+    // cout<<arr_average(arr,len);
 
 
     return 0;
 }
+

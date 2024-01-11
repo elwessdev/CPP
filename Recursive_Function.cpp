@@ -91,8 +91,14 @@ float arr_average(float arr[],int len){
     return arr_average(arr, len);
 }
 
-int main()
-{
+// P6- Array increment
+void arr_increment(int arr[], int len){
+    for(int i=0; i<len;i++){
+        cout<<arr[i]+i<<" ";
+    }
+}
+
+int main(){
 //-------- Homework --------
 // Factorial with recursive
 //    cout<<factorial(6);
@@ -136,10 +142,13 @@ int main()
     // }
     // cout<<arr_average(arr,len);
 
-    int n;
-    cout<<"Enter n: "; cin>>n;
-    cout<<"=> "<<n;
-
+// P6- Array increment
+    int arr[100];
+    int len; cin>>len;
+    for(int i=0;i<len;i++){
+        cin>>arr[i];
+    }
+    arr_increment(arr,len);
 
     return 0;
 }

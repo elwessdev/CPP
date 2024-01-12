@@ -71,7 +71,7 @@ void divide(float &num1,float &num2){
         cout<<"Can't divide by zero\n";
     }
 }
-int Calculator(){
+void Calculator(){
     int operation=0;
     float a,b;
     while(true){

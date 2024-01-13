@@ -57,44 +57,39 @@ int arr_max(int arr[],int len){
     return max(sub_result, arr[len-1]);
 }
 
-// P4- Array Sum
-int sum_ar=0;
+//// P4- Array Sum
 int arr_sum(int arr[],int len){
-    sum_ar+=arr[len];
-    if(len==0)
-        return sum_ar;
-    len--;
-    return arr_sum(arr, len);
+    if(len==1)
+        return arr[0];
+    int sub_result=arr_sum(arr,len-1);
+    return sub_result+arr[len-1];
 }
 
 // P5- Array average
-int sum_average=0;
 float arr_average(float arr[],int len){
-    sum_average+=arr[len];
-    if(len==0)
-        return sum_average;
-    len--;
-    return arr_average(arr, len);
+    if(len==1)
+        return arr[0];
+    double sub_result=arr_average(arr,len-1);
+    sub_result=sub_result*(len-1);
+    return (sub_result+arr[len-1])/len;
 }
 
-// P6- Array increment
-int a=0;
+// P6- Array incremen
 void arr_increment(int arr[], int len){
-    if(a==(sizeof(arr)/sizeof(int))){
-        arr[len]+=len;
-        cout<<arr[len]<<" ";
-    } else {
-        arr[len]+=len;
-        cout<<arr[len]<<" ";
-        a++;
-        arr_increment(arr,a);
-    }
+    if(len==0)
+        return;
+    arr_increment(arr,len-1);
+    arr[len-1]+=len-1;
 }
 
-// P7- Array accumlulation
+// P7- Array accumulation
 void accumulate_arr(int arr[],int len){
-
+    if(len==1)
+        return;
+    accumulate_arr(arr,len-1);
+    arr[len-1]+=arr[len-2];
 }
+
 
 int main(){
 //-------- Homework --------
@@ -115,8 +110,8 @@ int main(){
 //    cout<<my_pow(5,3);
 
 // P3- Array maximum
-    int arr[]={1,44,5,23,7};
-    cout<<arr_max(arr,5);
+//    int arr[]={1,44,5,23,7};
+//    cout<<arr_max(arr,5);
 
 // P4- Array Sum
 //    int arr[100];
@@ -127,29 +122,33 @@ int main(){
 //    cout<<arr_sum(arr,len);
 
 // P5- Array average
-    // float arr[100];
-    // int len; cin>>len;
-    // for(int i=0;i<len;i++){
-    //     cin>>arr[i];
-    // }
-    // cout<<arr_average(arr,len);
+//     float arr[100];
+//     int len; cin>>len;
+//     for(int i=0;i<len;i++){
+//         cin>>arr[i];
+//     }
+//     cout<<arr_average(arr,len);
 
 // P6- Array increment
-//    int arr[100];
-//    int len; cin>>len;
+//    int arr[100],len; cin>>len;
 //    for(int i=0;i<len;i++){
 //        cin>>arr[i];
 //    }
 //    arr_increment(arr,len);
+//    for(int i=0;i<len;i++){
+//       cout<<arr[i]<<" ";
+//    }
 
 // P7- Array Accumulation
-//    int arr[100];
-//    int len; cin>>len;
-//    for(int i=0;i<len;i++){
-//        cin>>arr[i];
-//    }
-//    accumulate_arr(arr,len);
-
+    int arr[100];
+    int len; cin>>len;
+    for(int i=0;i<len;i++){
+        cin>>arr[i];
+    }
+    accumulate_arr(arr,len);
+    for(int i=0;i<len;i++){
+        cout<<arr[i]<<" ";
+    }
 
 
 

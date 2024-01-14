@@ -107,8 +107,44 @@ int suffix_sum(int arr[],int len,int signature){
     int sub_result=suffix_sum(arr,len-1,signature-1);
     return sub_result+arr[len-1];
 }
-
-
+// P3 - Prefix Sum
+int prefix_sum(int arr[],int len,int signature){
+    if(signature==0)
+        return arr[signature-1];
+    int sub_result=prefix_sum(arr,len,signature-1);
+    return sub_result+arr[signature-1];
+}
+// P4 - Is Palindrome
+bool is_palindrome(int arr[],int len,int signature){
+    if(arr[signature]!=arr[len])
+        return false;
+    is_palindrome(arr,len-1,signature+1);
+}
+// P5 - Is Prefix
+bool is_prefix(string main,string prefix,int start_pos=0){
+    cout<<prefix.size()-1<<" "<<start_pos<<" "<<main[start_pos]<<" "<<prefix[start_pos]<<endl;
+    if(start_pos==prefix.size()-1&&main[start_pos]==prefix[start_pos]){
+        return true;
+    } else if(main[start_pos]!=prefix[start_pos]){
+        return false;
+    } else {
+        is_prefix(main,prefix,start_pos+1);
+    }
+}
+// P6 - Trace -> This function to reverse numbers
+void do_something(int n){
+    if(n){
+        cout<<n%10<<" ";
+        do_something(n/10);
+    }
+}
+// P7 - Count primes
+int cout_primes(int p_start,int p_end){
+    if(p_start<p_end){
+        int num=cout_primes(2,p_start);
+        if(num%p_start==0)
+    }
+}
 
 int main(){
 //-------- Homework --------
@@ -190,10 +226,34 @@ int main(){
 */
 
 // P2 - Suffix Sum
-    int arr[]={1,3,4,6,7};
-    int signature=3,len=5;
-    cout<<suffix_sum(arr,len,signature);
+//    int arr[]={1,3,4,6,7};
+//    int signature=3,len=5;
+//    cout<<suffix_sum(arr,len,signature);
 
+// P3 - Prefix Sum
+//    int arr[]={1,3,4,6,7};
+//    int signature=3,len=5;
+//    cout<<prefix_sum(arr,len,signature);
+
+// P4 - Is Palindrome
+//    int arr[]={1,3,5,3,1};
+//    int len=5,signature=0;
+//    cout<<is_palindrome(arr,len,signature);
+
+// P5 - Is Prefix
+//    string main="abcdefgh", prefix="abcde";
+//    if(is_prefix(main,prefix)){
+//        cout<<"Yes";
+//    } else {
+//        cout<<"false";
+//    }
+
+// P6 - Trace
+//    do_something(123456);
+
+// P7 - Count primes
+    int p_start=10,p_end=20;
+    cout<<count_primes(p_start,p_end);
 
 
 

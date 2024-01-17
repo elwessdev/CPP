@@ -139,12 +139,26 @@ void do_something(int n){
     }
 }
 // P7 - Count primes
-int cout_primes(int p_start,int p_end){
+void count_primes(int p_start,int p_end){
     if(p_start<p_end){
-        int num=cout_primes(2,p_start);
-        if(num%p_start==0)
+        for(int i=2;i<p_start;i++){
+            if(p_start%i==0){
+                count_primes(p_start+1,p_end);
+            }
+        }
+        cout<<p_start<<" ";
+        count_primes(p_start+1,p_end);
     }
 }
+// P8 - Grid Sum
+int path_sum(int grid[][],int row,int col,int ROWS,int COLS){
+
+}
+
+
+
+
+
 
 int main(){
 //-------- Homework --------
@@ -252,8 +266,17 @@ int main(){
 //    do_something(123456);
 
 // P7 - Count primes
-    int p_start=10,p_end=20;
-    cout<<count_primes(p_start,p_end);
+//    int p_start=10,p_end=20;
+//    count_primes(p_start,p_end);
+
+// P8 - Grid Sum
+    int grid[100][100];
+    int row,col; cin>>row>>col;
+    int ROWS,COLS;
+    cout<<path_sum(grid,row,col,ROWS,COLS);
+
+
+
 
 
 

@@ -4,7 +4,6 @@ using namespace std;
 
 int main_1D()
 {
-<<<<<<< Updated upstream
 //----- Easy to Medium Challenges ----//
 // P1 - Is increasing array ?
 //    int arr[200];
@@ -337,7 +336,8 @@ int main_1D()
 
 
 // P5 - Longest Subarray
-=======
+
+
 //----- Practice ----//
 //--> P1 - Reverse in place
 //    int arr[200];
@@ -395,7 +395,6 @@ int main_1D()
 
 
 
->>>>>>> Stashed changes
 
 
 
@@ -406,9 +405,6 @@ int main_1D()
 
 
 
-<<<<<<< Updated upstream
-=======
     // End
     return 0;
->>>>>>> Stashed changes
 }

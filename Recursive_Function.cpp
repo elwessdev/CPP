@@ -161,12 +161,30 @@ int count_primes(int p_start,int p_end){
     return result;
 }
 // P8 - Grid Sum
-//int path_sum(int grid[][],int row,int col,int ROWS,int COLS){
-//
-//}
+int di[]={1,0,1};
+int dj[]={0,1,1};
+int path_sum(int grid[100][100],int ROWS,int COLS,int row=0,int col=0){
+    int sum=grid[row][col];
+    if(row==ROWS-1&&col==COLS-1)
+        return sum;
+    int max_idx=-1, max_value;
+    for(int d=0;d<3;d++){
+        int new_row=row+di[d];
+        int new_col=row+dj[d];
+        if(new_row>=ROWS||new_col>=COLS)
+            continue;
+        if(max_value<grid[new_row][new_col])
+            max_value=grid[new_row][new_col], max_idx=d;
+    }
+    int new_row = row+di[max_idx];
+    int new_col = col+dj[max_idx];
+    return sum+path_sum(grid,ROWS,COLS,new_row,new_col);
+}
 // P9 - Fibonacci
 int fibonacci(int n){
-
+    if(n<=1)
+        return 1;
+    return fibonacci(n-1)+fibonacci(n-2);
 }
 
 
@@ -279,15 +297,13 @@ int main(){
     cout<<count_primes(p_start,p_end);*/
 
 // P8 - Grid Sum
-//    int grid[100][100];
-//    int row,col; cin>>row>>col;
-//    int ROWS,COLS;
-//    cout<<path_sum(grid,row,col,ROWS,COLS);
+   /*int grid[100][100]={{0,8,2},{4,1,8},{41,8,2}};
+    int ROWS=3,COLS=3;
+    int row,col;
+    cout<<path_sum(grid,ROWS,COLS,row,col);*/
 
 // P9 - Fibonacci
-//    int arr[100];
-//    int n=6;
-//    cin>>fibonacci(n);
+    cout<<fibonacci(1);
 
 
 

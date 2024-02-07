@@ -36,6 +36,7 @@
 		<Unit filename="CharArrays.cpp" />
 		<Unit filename="DataTypes&amp;Variables.cpp" />
 		<Unit filename="Function.cpp" />
+		<Unit filename="Hospital_System.cpp" />
 		<Unit filename="MultidimensionalArrays.cpp" />
 		<Unit filename="Operators.cpp" />
 		<Unit filename="Recursive_Function.cpp" />

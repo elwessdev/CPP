@@ -33,6 +33,9 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="1D-Arrays.cpp" />
+		<Unit filename="C:/Users/Osama/Desktop/dd.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="CharArrays.cpp" />
 		<Unit filename="DataTypes&amp;Variables.cpp" />
 		<Unit filename="Function.cpp" />

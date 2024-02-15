@@ -93,38 +93,50 @@ bool addPatient(){
 //    }
 }
 
-void printPatient(){
-    cout<<"\n***********************";
-    for(int i=0;i<MAX_SPECIALIZATION;i++){
-        if(!(queue_length[i]==0)){
-            cout<<"\nThere are "<<queue_length[i]<<" patients in specialization "<<i<<"\n";
-            for(int j=0;j<queue_length[i];j++){
-                string statusStr;
-                if(statusList[i][j]==0){
-                    statusStr="Regular";
-                } else {
-                    statusStr="Urgent";
-                }
-                cout<<"- "<<namesList[i][j]<<" "<<statusStr<<"\n";
-            }
+void print_patient(int spec, string nms[],int sts[]){
+    int len=queue_length[spec];
+    if(len==0){
+        return;
+    }
+    cout<<"\nThere are "<<len<<" patients in specialization "<<spec<<"\n";
+    for(int i=0;i<len;i++){
+        cout<<"- "<<nms[i]<<" ";
+        if(sts[i]){
+            cout<<"urgent\n";
+        } else {
+            cout<<"regular\n";
         }
     }
 }
+void printPatients(){
+    cout<<"\n***********************";
+    for(int i=0;i<MAX_SPECIALIZATION;i++){
+        print_patient(i,namesList[i],statusList[i]);
+    }
+    cout<<"\n";
+}
 
+void delete_patient(int spec, string nms[],int sts[]){
+    int len=queue_length[spec];
+    for(int i=1;i>len;i++){
+        nms[i-1]=nms[i];
+        sts[i-1]=sts[i];
+    }
+    queue_length[spec]--;
+}
 void nextPatient(){
     int spec;
     cout<<"\nEnter specialization: "; cin>>spec;
-    if(queue_length[spec]==0){
-        cout<<"No patients at the moment. Have rest doctor :)";
-    } else {
-        cout<<namesList[spec][0]<<" please go with the Doctor";
-        for(int i=0;i<queue_length[spec];i++){
-            namesList[spec][i]=namesList[spec][i+1];
-            statusList[spec][i]=statusList[spec][i+1];
-        }
-        queue_length[spec]--;
+
+    int len=queue_length[spec];
+
+    if(len==0){
+        cout<<"No patients at the moment. Have rest doctor :)\n";
+        return;
     }
-    cout<<"\n";
+
+    cout<<namesList[spec][0]<<" please go with the Doctor :)\n";
+    delete_patient(spec,namesList[spec],statusList[spec]);
 }
 
 void hospital_system(){
@@ -136,7 +148,7 @@ void hospital_system(){
         } else if(choice==1){
             addPatient();
         } else if(choice==2){
-            printPatient();
+            printPatients();
         } else if(choice==3){
             nextPatient();
         } else{
